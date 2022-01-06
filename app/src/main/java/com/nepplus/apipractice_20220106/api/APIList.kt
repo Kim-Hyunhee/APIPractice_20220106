@@ -1,5 +1,7 @@
 package com.nepplus.apipractice_20220106.api
 
+import com.nepplus.apipractice_20220106.models.BasicResponse
+import retrofit2.Call
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.POST
@@ -15,6 +17,6 @@ interface APIList {
     fun postRequestLogin(
         @Field("email") email : String,
         @Field("password") pw : String,
-    )
+    ) : Call<BasicResponse>  //  ( BasicResponse 형태의 응답을 받는 ) API 호출 기능을 만들어냄
 
 }
