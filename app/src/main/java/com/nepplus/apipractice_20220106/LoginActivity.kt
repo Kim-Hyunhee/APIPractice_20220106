@@ -49,6 +49,12 @@ class LoginActivity : BaseActivity() {
 
                         Toast.makeText(this@LoginActivity, "${loginUserNick}님 환영합니다.", Toast.LENGTH_SHORT).show()
 
+//                        메인화면으로 이동
+                        val myIntent = Intent(mContext, MainActivity::class.java)
+                        startActivity(myIntent)
+
+                        finish()
+
                     }
 
                     else {
