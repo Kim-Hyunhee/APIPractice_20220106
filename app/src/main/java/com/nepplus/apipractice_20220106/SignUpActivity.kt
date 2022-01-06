@@ -3,6 +3,7 @@ package com.nepplus.apipractice_20220106
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import com.nepplus.apipractice_20220106.api.APIList
 import com.nepplus.apipractice_20220106.api.ServerAPI
 import com.nepplus.apipractice_20220106.models.BasicResponse
@@ -51,6 +52,17 @@ class SignUpActivity : AppCompatActivity() {
                         val br = response.body()!!  // BasicResponse 추출
 
 //                        회원가입 성공 처리만 => bt 변수 이용 진행
+//                        이미 같은 구조에 대한 분석을 => 클래스/변수들로 만들어 둔 상태
+//                        이미 분석이 끝났다고 전제하고, 변수들을 가져다 사용
+
+                        val signUpNickname = br.data.user.nick_name
+                        Toast.makeText(
+                            this@SignUpActivity,
+                            "${signUpNickname}님 회원가입을 축하합니다.",
+                            Toast.LENGTH_SHORT
+                        ).show()
+
+                        finish()  // 로그인 화면으로 복귀
 
                     }
                     else {
