@@ -3,6 +3,7 @@ package com.nepplus.apipractice_20220106
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.nepplus.apipractice_20220106.models.BasicResponse
 import com.nepplus.apipractice_20220106.models.ReviewData
 import com.neppplus.phoneorderapp_20220105.adapters.ReviewAdapter
@@ -46,7 +47,7 @@ class MainActivity : BaseActivity() {
 
         mReviewAdapter = ReviewAdapter(mContext, mReviewList)
         reviewRecyclerView.adapter = mReviewAdapter
-        reviewRecyclerView.layoutManager = LinearLayoutManager(mContext)
+        reviewRecyclerView.layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
 
 
 
