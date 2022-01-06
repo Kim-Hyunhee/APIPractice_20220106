@@ -2,10 +2,7 @@ package com.nepplus.apipractice_20220106.api
 
 import com.nepplus.apipractice_20220106.models.BasicResponse
 import retrofit2.Call
-import retrofit2.http.Field
-import retrofit2.http.FormUrlEncoded
-import retrofit2.http.POST
-import retrofit2.http.PUT
+import retrofit2.http.*
 
 interface APIList {
 
@@ -30,6 +27,16 @@ interface APIList {
         @Field("nick_name") nick : String,
         @Field("phone") phone : String
     ) : Call<BasicResponse>  // 회원가입도 로그인처럼 code/message/data 세 가지만 제일 바깥 {  }에 담겨 있다.
+
+//   중복검사
+
+    @GET("/user/check")
+    fun getRequestDupleCheck(
+        @Query("type") type : String,
+        @Query("value") value : String
+    ) : Call<BasicResponse>
+
+
 
 
 }
