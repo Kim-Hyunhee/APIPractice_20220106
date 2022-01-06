@@ -2,6 +2,7 @@ package com.nepplus.apipractice_20220106.api
 
 import com.nepplus.apipractice_20220106.models.BasicResponse
 import retrofit2.Call
+import retrofit2.Callback
 import retrofit2.http.*
 
 interface APIList {
@@ -36,7 +37,8 @@ interface APIList {
         @Query("value") value : String
     ) : Call<BasicResponse>
 
-
+    @GET("/review")
+    fun getRequestAllReview() : Call<BasicResponse>
 
 
 }
