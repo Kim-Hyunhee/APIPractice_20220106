@@ -26,9 +26,6 @@ class SignUpActivity : AppCompatActivity() {
             val inputNickname = edtNickname.text.toString()
             val inputPhoneNum = edtPhone.text.toString()
 
-//            API 호출(회원가입) => ServerAPI + APIList 조합
-            val retrofit = ServerAPI.getRetrofit()
-            val apiList = retrofit.create(APIList::class.java)
 
 //            추가된 회원가입 기능 활용
             apiList.putRequestSignUp(
@@ -90,8 +87,6 @@ class SignUpActivity : AppCompatActivity() {
 
             val inputEmail = edtEmail.text.toString()
 
-            val retrofit = ServerAPI.getRetrofit()
-            val apiList = retrofit.create(APIList::class.java)
 
             apiList.getRequestDupleCheck("EMAIL", inputEmail).enqueue(object :Callback<BasicResponse>{
                 override fun onResponse(

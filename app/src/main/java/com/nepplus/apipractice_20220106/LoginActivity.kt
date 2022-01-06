@@ -25,8 +25,6 @@ class LoginActivity : AppCompatActivity() {
 
 //            서버 API의 로그인 기능에 활용 (ServerAPI 클래스 / APIList 인터페이스 결합)
 
-            val retrofit = ServerAPI.getRetrofit()  // API 연결 도구 생성
-            val apiList = retrofit.create(APIList::class.java)  // 연결도구 + 기능목록 결합 객체 생성
 
 //            실제 로그인 기능 호출 (Request) => 서버에 이거 해주세요 하고 날림
             apiList.postRequestLogin(inputEmail, inputPw).enqueue(object : Callback<BasicResponse>{
