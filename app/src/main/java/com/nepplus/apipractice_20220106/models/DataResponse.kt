@@ -3,6 +3,6 @@ package com.nepplus.apipractice_20220106.models
 class DataResponse(
     val user : UserData,
     val token : String,
-    val review : List<ReviewData>
+    val reviews : List<ReviewData>
 ) {
 }
