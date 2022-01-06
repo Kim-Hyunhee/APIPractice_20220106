@@ -2,9 +2,14 @@ package com.nepplus.apipractice_20220106
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.nepplus.apipractice_20220106.api.APIList
 import com.nepplus.apipractice_20220106.api.ServerAPI
+import com.nepplus.apipractice_20220106.models.BasicResponse
 import kotlinx.android.synthetic.main.activity_main.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,7 +28,34 @@ class MainActivity : AppCompatActivity() {
             val apiList = retrofit.create(APIList::class.java)  // 연결도구 + 기능목록 결합 객체 생성
 
 //            실제 로그인 기능 호출 (Request) => 서버에 이거 해주세요 하고 날림
-            apiList.postRequestLogin(inputEmail, inputPw)
+            apiList.postRequestLogin(inputEmail, inputPw).enqueue(object : Callback<BasicResponse>{
+                override fun onResponse(
+                    call: Call<BasicResponse>,
+                    response: Response<BasicResponse>
+                ) {
+                    
+//                    로그인 성공/실패 상관없이 응답 자체가 돌아온 경우
+//                    서버가 정상 동작은 하지만 결과는 아직 모름
+                    
+//                    성공/실패 경우 나뉨
+                    if (response.isSuccessful) {
+//                        로그인 성공 => 아이디/비번 둘 다 맞은 상황
+                        Toast.makeText(this@MainActivity, "로그인 성공", Toast.LENGTH_SHORT).show()
+                    }
+                    else {
+//                        로그인 실패 => 아이디나 비번이 틀림
+                        Toast.makeText(this@MainActivity, "로그인 실패", Toast.LENGTH_SHORT).show()
+                    }
+                    
+                }
+
+                override fun onFailure(call: Call<BasicResponse>, t: Throwable) {
+                    
+//                    서버 연결 자체를 실패한 경우
+                    
+                }
+
+            }) 
 
 
 
