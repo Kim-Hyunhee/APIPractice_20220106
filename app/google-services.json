@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "183034792334",
+    "project_id": "apipractice-20220106-aa1b7",
+    "storage_bucket": "apipractice-20220106-aa1b7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:183034792334:android:877b80dcfecb5a32b1bcdf",
+        "android_client_info": {
+          "package_name": "com.nepplus.apipractice_20220106"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "183034792334-89ubtnn4okl9cuuj9c8p3eo70j2q71go.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwhYps43wT9TMusZV0nUjXoB2KnyNShhU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "183034792334-89ubtnn4okl9cuuj9c8p3eo70j2q71go.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
