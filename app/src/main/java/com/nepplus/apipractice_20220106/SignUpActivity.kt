@@ -7,6 +7,7 @@ import android.widget.Toast
 import com.nepplus.apipractice_20220106.api.APIList
 import com.nepplus.apipractice_20220106.api.ServerAPI
 import com.nepplus.apipractice_20220106.models.BasicResponse
+import com.neppplus.apipractice_20220106.BaseActivity
 import kotlinx.android.synthetic.main.activity_sign_up.*
 import retrofit2.Call
 import retrofit2.Callback

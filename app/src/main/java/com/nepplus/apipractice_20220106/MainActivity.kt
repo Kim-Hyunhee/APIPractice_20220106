@@ -1,10 +1,10 @@
-package com.nepplus.apipractice_20220106
-
+package com.neppplus.apipractice_20220106
 
 import android.content.Intent
 import android.os.Bundle
-
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.nepplus.apipractice_20220106.MyProfileActivity
+import com.nepplus.apipractice_20220106.R
 import com.nepplus.apipractice_20220106.models.BasicResponse
 import com.nepplus.apipractice_20220106.models.ReviewData
 import com.neppplus.phoneorderapp_20220105.adapters.ReviewAdapter
@@ -38,16 +38,18 @@ class MainActivity : BaseActivity() {
         apiList.getRequestAllReview().enqueue(object : Callback<BasicResponse> {
             override fun onResponse(call: Call<BasicResponse>, response: Response<BasicResponse>) {
 
-                if (response.isSuccessful){
+                if (response.isSuccessful) {
+
                     val br = response.body()!!
 
 //                    서버가 주는 응답 -> data -> reviews 목록 전체를 mReviewList에 추가.
 
                     mReviewList.addAll( br.data.reviews )
 
-//                    리싸이클러뷰 세팅 완료 이후에 => 데이터를 추가한다면 자동 반영 X
-//                    어댑터의 내용 변경 -> 반영 해달라 (어댑터에게 요청)
+//                    리싸이클러뷰 세팅 완료 이후에 => 데이터를 추가한다면, 자동 반영 X.
+//                    어댑터의 내용 변경 -> 반영 해달라. (어댑터에게 요청)
                     mReviewAdapter.notifyDataSetChanged()
+
                 }
 
             }
@@ -61,8 +63,6 @@ class MainActivity : BaseActivity() {
         mReviewAdapter = ReviewAdapter(mContext, mReviewList)
         reviewRecyclerView.adapter = mReviewAdapter
         reviewRecyclerView.layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
-
-
 
     }
 }

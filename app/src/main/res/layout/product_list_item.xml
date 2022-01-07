@@ -59,6 +59,14 @@
 
         </LinearLayout>
 
+        <Button
+            android:id="@+id/btnWriteReview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginEnd="15dp"
+            android:text="리뷰 작성"/>
+
 
 
     </LinearLayout>
