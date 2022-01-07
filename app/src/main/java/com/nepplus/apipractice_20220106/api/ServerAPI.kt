@@ -3,6 +3,7 @@ package com.nepplus.apipractice_20220106.api
 import android.content.Context
 import com.nepplus.apipractice_20220106.utils.ContextUtil
 import okhttp3.Interceptor
+import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
@@ -49,14 +50,15 @@ class ServerAPI {
                     proceed(newRequest)
                 }
             }
-
-//
+//                위에 적은 인터셉터를 적용하는 통신 체계 (클라이언트의 기능을 수정)
+                val myClient = OkHttpClient.Builder().addInterceptor(interceptor).build()
 
 
 //                실제 레트로핏 객체 생성
                 retrofit = Retrofit.Builder()
                     .baseUrl(BASE_URL)  //  어느 서버 안에서 움직일 것인지 알려주는 것
                     .addConverterFactory(GsonConverterFactory.create())  //  JSON -> 자동 분석 도구 설치
+                    .client(myClient)
                     .build()
 
             }
