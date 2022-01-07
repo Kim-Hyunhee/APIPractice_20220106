@@ -1,12 +1,14 @@
-package com.neppplus.apipractice_20220106
+package com.nepplus.apipractice_20220106
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
-import com.nepplus.apipractice_20220106.MyProfileActivity
+
 import com.nepplus.apipractice_20220106.R
 import com.nepplus.apipractice_20220106.models.BasicResponse
 import com.nepplus.apipractice_20220106.models.ReviewData
+import com.neppplus.apipractice_20220106.BaseActivity
+import com.neppplus.apipractice_20220106.ProductListActivity
 import com.neppplus.phoneorderapp_20220105.adapters.ReviewAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call

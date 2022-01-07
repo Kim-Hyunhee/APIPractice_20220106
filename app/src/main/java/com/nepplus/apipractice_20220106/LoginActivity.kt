@@ -9,7 +9,6 @@ import com.nepplus.apipractice_20220106.api.ServerAPI
 import com.nepplus.apipractice_20220106.models.BasicResponse
 import com.nepplus.apipractice_20220106.utils.ContextUtil
 import com.neppplus.apipractice_20220106.BaseActivity
-import com.neppplus.apipractice_20220106.MainActivity
 import kotlinx.android.synthetic.main.activity_login.*
 import retrofit2.Call
 import retrofit2.Callback
