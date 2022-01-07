@@ -49,6 +49,10 @@ class LoginActivity : BaseActivity() {
 
                         Toast.makeText(this@LoginActivity, "${loginUserNick}님 환영합니다.", Toast.LENGTH_SHORT).show()
 
+//                        로그인 성공 : 서버가 토큰을 발급해서 내려준다.
+//                          => 본인이 누군지 알려줘야 하는 API들은 토큰값이 필요함 => 다른 (거의 모든)화면에도 전달해야함
+//                          => 사용하는 기기의 보조 기억 장치에 기록해두고 -> 필요할 때 보조 기억 장치에서 꺼내다 사용
+
 //                        메인화면으로 이동
                         val myIntent = Intent(mContext, MainActivity::class.java)
                         startActivity(myIntent)
