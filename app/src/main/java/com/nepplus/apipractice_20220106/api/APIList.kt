@@ -46,7 +46,7 @@ interface APIList {
     fun getRequestMyInfo() : Call<BasicResponse>
 
 
-    @GET("/poduct")
+    @GET("/product")
     fun getRequestAllProduct(): Call<BasicResponse>
 //    리뷰 등록하기
 

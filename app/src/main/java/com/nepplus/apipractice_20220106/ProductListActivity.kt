@@ -2,8 +2,6 @@ package com.nepplus.apipractice_20220106
 
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.nepplus.apipractice_20220106.ProductAdapter
-import com.nepplus.apipractice_20220106.R
 import com.nepplus.apipractice_20220106.models.BasicResponse
 import com.nepplus.apipractice_20220106.models.ProductData
 import kotlinx.android.synthetic.main.activity_product_list.*
@@ -28,7 +26,7 @@ class ProductListActivity : BaseActivity() {
 
                     val br = response.body()!!
 
-                    mProductList.addAll( br.data.poducts )
+                    mProductList.addAll( br.data.products )
 
                     mAdapter.notifyDataSetChanged()
 
