@@ -1,6 +1,7 @@
 package com.nepplus.apipractice_20220106.models
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 class ProductData(
     val id : Int,
@@ -9,5 +10,5 @@ class ProductData(
     @SerializedName("image_url")
     val imageURL : String,  // 서버가 주는 이름표와 저장하려는 변수명이 다를 때 사용
     val store : StoreData
-) {
+) :Serializable {
 }
