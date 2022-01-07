@@ -2,7 +2,9 @@ package com.nepplus.apipractice_20220106
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.google.firebase.messaging.FirebaseMessaging
 
 import com.nepplus.apipractice_20220106.R
 import com.nepplus.apipractice_20220106.models.BasicResponse
@@ -23,6 +25,17 @@ class MainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        FirebaseMessaging.getInstance().token.addOnCompleteListener {
+
+            if(it.isSuccessful) {
+
+                val deviceToken = it.result!!
+                Log.d("FCM토큰",deviceToken)
+
+            }
+
+        }
 
         btnViewProduct.setOnClickListener {
 
