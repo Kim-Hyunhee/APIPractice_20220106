@@ -4,6 +4,7 @@ class DataResponse(
     val user : UserData,
     val token : String,
     val reviews : List<ReviewData>,
-    val poducts : List<ProductData>
+    val poducts : List<ProductData>,
+    val review : ReviewData
 ) {
 }
