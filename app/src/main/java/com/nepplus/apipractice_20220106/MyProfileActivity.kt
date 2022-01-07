@@ -19,7 +19,7 @@ class MyProfileActivity : BaseActivity() {
 
 //        ContextUtil로 저장해둔 토큰을 가져오자
 
-        apiList.getRequestMyInfo( ContextUtil.getToken(mContext) ).enqueue(object : retrofit2.Callback<BasicResponse>{
+        apiList.getRequestMyInfo( ).enqueue(object : retrofit2.Callback<BasicResponse>{
             override fun onResponse(call: Call<BasicResponse>, response: Response<BasicResponse>) {
 
                 if (response.isSuccessful) {
