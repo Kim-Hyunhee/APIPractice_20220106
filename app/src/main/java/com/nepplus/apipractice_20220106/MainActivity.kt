@@ -7,8 +7,7 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.nepplus.apipractice_20220106.R
 import com.nepplus.apipractice_20220106.models.BasicResponse
 import com.nepplus.apipractice_20220106.models.ReviewData
-import com.neppplus.apipractice_20220106.BaseActivity
-import com.neppplus.apipractice_20220106.ProductListActivity
+
 import com.neppplus.phoneorderapp_20220105.adapters.ReviewAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call

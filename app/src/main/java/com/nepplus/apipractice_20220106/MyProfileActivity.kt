@@ -5,7 +5,7 @@ import android.os.Bundle
 import com.bumptech.glide.Glide
 import com.nepplus.apipractice_20220106.models.BasicResponse
 import com.nepplus.apipractice_20220106.utils.ContextUtil
-import com.neppplus.apipractice_20220106.BaseActivity
+
 import kotlinx.android.synthetic.main.activity_my_profile.*
 import retrofit2.Call
 import retrofit2.Response

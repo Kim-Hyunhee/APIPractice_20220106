@@ -1,4 +1,4 @@
-package com.neppplus.apipractice_20220106
+package com.nepplus.apipractice_20220106
 
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
