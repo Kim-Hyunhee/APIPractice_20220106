@@ -61,4 +61,10 @@ interface APIList {
 
     ) : Call<BasicResponse>
 
+//    특정 리뷰 상세보기
+    @GET("/review/{review_id}")  // {review_id}는 몇 번 리뷰를 보고 싶은지 숫자를 적어줄 공간으로 세팅
+    fun getRequestReviewDetail(
+        @Path("review_id") id: Int
+    ) : Call<BasicResponse>
+
 }
